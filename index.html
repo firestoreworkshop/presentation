@@ -11,11 +11,10 @@
 	<link rel="stylesheet" href="css/theme/league.css">
 
 	<style>
-		.webrtc-logo-img {
+		.no-img-border {
 			background: unset !important;
 			border: unset !important;
 			box-shadow: unset !important;
-			width: 100% !important;
 		}
 
 		.no-caps {
@@ -66,51 +65,213 @@
 			<section>
 				<h2>
 					Firestore
-					</h3>
-					<h3>
-						Jan Greger Hemb & Erik
-					</h3>
-					<h4>
-						Senior knowledge engineer at Computas
-					</h4>
-					<h4>
-						bit.ly/
-					</h4>
+				</h2>
+				<h3>
+					Jan Greger Hemb & Erik
+				</h3>
+				<h4>
+					Senior knowledge engineer at Computas
+				</h4>
+				<h4>
+					bit.ly/
+				</h4>
+			</section>
+			<section>
+				<img class="stretch no-img-border" data-src="media/logo-vertical.svg">
 			</section>
 			<section>
 				<section>
 					What is Firebase
 				</section>
 				<section>
-					TODO more
+					<img class="stretch no-img-border" data-src="media/auth.png">
+				</section>
+				<section>
+					<img class="stretch no-img-border" data-src="media/database.png">
+				</section>
+				<section>
+					<img class="stretch no-img-border" data-src="media/storage.png">
+				</section>
+				<section>
+					<img class="stretch no-img-border" data-src="media/hosting.png">
+				</section>
+				<section>
+					<img class="stretch no-img-border" data-src="media/functions.png">
+				</section>
+				<section>
+					<img class="stretch no-img-border" data-src="media/firestore.png">
+				</section>
+				<section>
+					(Demo of firebase console?)
 				</section>
 			</section>
 			<section>
-				FireStore in a nutshell
+				Firestore in pracsis, with a demo (Koblingsordre!)
+			</section>
+			<section>
+				<section>
+					FireStore in a nutshell
+				</section>
+				<section>
+					NoSQL cloud database
+				</section>
+				<section>
+					"Documents/Objects"
+				</section>
+				<section>
+					<img class="stretch no-img-border" data-src="media/firestoreColl.png">
+				</section>
+				<section>
+					<img class="stretch no-img-border" data-src="media/firestoreDocs.png">
+				</section>
+				<section>
+					<table>
+						<!-- <thead>
+							<tr>
+								<th>Item</th>
+								<th>Value</th>
+								<th>Quantity</th>
+							</tr>
+						</thead> -->
+						<tbody>
+							<tr>
+								<td>SQL</td>
+								<td>Table</td>
+								<td>Row</td>
+								<td>Column</td>
+							</tr>
+							<tr>
+								<td>NoSQL</td>
+								<td>Collection</td>
+								<td>Document</td>
+								<td>Field</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
 			</section>
 			<section>
 				NoSQl in a nutshell
 			</section>
 			<section>
-				The benefits of Firestore
+				<section>
+					<h2>The benefits of Firestore</h2>
+				</section>
+				<section>
+					Lookup time ONLY dependable on amount of data retrieved
+				</section>
+				<section>
+					Automatically scales to match ANY usage
+				</section>
+				<section>
+					Automatic data syncronasitation across users
+				</section>
+				<section>
+					Offline support
+				</section>
+				<section>
+					Has ACID transactions
+				</section>
+				<section>
+					Where statements across multible fields
+				</section>
+				<!-- <section>
+					<h3>Benefits comming for Realtime Database</h3>
+					<ul>
+						<li>Scaling</li>
+						<li>Array contains</li>
+					</ul>
+				</section> -->
 			</section>
 			<section>
-				The drawbacks of Firestore
+				<section>
+					<h2>All data is indexed</h2>
+					<aside class="notes" data-markdown>
+						- Zigzag merge join
+					</aside>
+				</section>
+				<section>
+					Never loops over all data when searching
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>The drawbacks of Firestore</h2>
+				</section>
+				<section>
+					If it can't be index, it can't be searched
+				</section>
+				<section>
+					Mixing datatypes causes problems
+				</section>
+				<section>
+					Can't do where on: =!, OR, “%partial%”, a missing field
+				</section>
+				<section>
+					Cant do where < or> on one field and then order by a different field
+				</section>
+				<section>
+					<table>
+						<thead>
+							<tr>
+								<th>Index A</th>
+								<th>Index B</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>A</td>
+								<td>4</td>
+							</tr>
+							<tr>
+								<td>B</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>C</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>D</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					Max 1 write pr sec pr document, max 1MB pr document and max 20k fields
+				</section>
+				<section>
+					Can't order by missing fields
+				</section>
 			</section>
 			<section>
 				Querying and sorting data
 			</section>
 			<section>
-				Firestore in pracsis, with a demo
+				<section>
+					<h2>Security</h2>
+				</section>
+				<section>
+					Security Rules
+					<aside class="notes" data-markdown>
+						- Written in broke JS, and run before each request. Returns if allowed to read or write
+					</aside>
+				</section>
 			</section>
 			<section>
-				Quickly mentioning security?
+				<section>
+					<h2>Pricing</h2>
+				</section>
+				<section>
+					Free and cheap!
+				</section>
+				<section>
+					Billed by number of retrived and changed documents
+				</section>
 			</section>
 			<section>
-				Pricing?
-			</section>
-			<section>
-				Remember, still beta! But really stable!
+				<h2>Beta</h2>
 			</section>
 			<section>
 				QnA
