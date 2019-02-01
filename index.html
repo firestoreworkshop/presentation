@@ -77,11 +77,11 @@
 				</h4>
 			</section>
 			<section>
-				<img class="stretch no-img-border" data-src="media/logo-vertical.svg">
+				<img class="stretch no-img-border" data-src="media/firebase.svg">
 			</section>
 			<section>
 				<section>
-					What is Firebase
+					<h2>What is Firebase</h2>
 				</section>
 				<section>
 					<img class="stretch no-img-border" data-src="media/auth.png">
@@ -106,7 +106,7 @@
 				</section>
 			</section>
 			<section>
-				Firestore in pracsis, with a demo (Koblingsordre!)
+				Firestore in practise, with a demo (Koblingsordre!)
 			</section>
 			<section>
 				<section>
@@ -149,6 +149,9 @@
 						</tbody>
 					</table>
 				</section>
+				<section>
+					<h3>No Longer i Beta!</h3>
+				</section>
 			</section>
 			<section>
 				NoSQl in a nutshell
@@ -158,22 +161,24 @@
 					<h2>The benefits of Firestore</h2>
 				</section>
 				<section>
-					Lookup time ONLY dependable on amount of data retrieved
+					<h3>
+						Lookuptime is independent for amount of data
+					</h3>
 				</section>
 				<section>
-					Automatically scales to match ANY usage
+					<h3>Automatically scales to match ANY usage</h3>
 				</section>
 				<section>
-					Automatic data syncronasitation across users
+					<h3>Automatic data syncronasitation across users</h3>
 				</section>
 				<section>
-					Offline support
+					<h3>Offline support</h3>
 				</section>
 				<section>
-					Has ACID transactions
+					<h3>Has ACID transactions</h3>
 				</section>
 				<section>
-					Where statements across multible fields
+					<h3>Where statements across multible fields</h3>
 				</section>
 				<!-- <section>
 					<h3>Benefits comming for Realtime Database</h3>
@@ -193,6 +198,15 @@
 				<section>
 					Never loops over all data when searching
 				</section>
+				<section>
+					<h3>How is data indexed?</h3>
+					<aside class="notes" data-markdown>
+						- all fields accendig and decending by default
+					</aside>
+				</section>
+				<section>
+					<h3>Composite indexes</h3>
+				</section>
 			</section>
 			<section>
 				<section>
@@ -203,6 +217,9 @@
 				</section>
 				<section>
 					Mixing datatypes causes problems
+				</section>
+				<section>
+					<h3>Can't query across sub collections (TODO IMG)</h3>
 				</section>
 				<section>
 					Can't do where on: =!, OR, “%partial%”, a missing field
@@ -246,7 +263,48 @@
 				</section>
 			</section>
 			<section>
-				Querying and sorting data
+				<section>
+					<h2>
+						Querying and sorting data
+					</h2>
+				</section>
+				<section>
+					<h3>
+						Three operators to play with
+					</h3>
+					<ul>
+						<li class="fragment">
+							Where
+						</li>
+						<li class="fragment">
+							OrderBy
+						</li>
+						<li class="fragment">
+							Limit
+						</li>
+						<li class="fragment">
+							startAt
+						</li>
+					</ul>
+					<aside class="notes" data-markdown>
+						- remeber for where: no =!, OR, “%partial%”, field not present
+						- remeber no <> on where and orderBy different field
+					</aside>
+				</section>
+				<section>
+					<h3>The where operator</h3>
+					<ul>
+						<li>&lt;</li>
+						<li>&lt;=</li>
+						<li>==</li>
+						<li>&gt;=</li>
+						<li>&gt;</li>
+						<li>array-contains</li>
+					</ul>
+					<aside class="notes" data-markdown>
+						- array-contains on one element pr query
+					</aside>
+				</section>
 			</section>
 			<section>
 				<section>
@@ -257,6 +315,23 @@
 					<aside class="notes" data-markdown>
 						- Written in broke JS, and run before each request. Returns if allowed to read or write
 					</aside>
+				</section>
+				<section>
+					<pre class=""><code class="TypeScript" data-trim contenteditable>
+						service cloud.firestore {
+							match /databases/{database}/documents {
+						
+								match /ansatt/{userId} {
+									allow read, update, delete: if request.auth.uid == userId;
+									allow create: if request.auth.uid != null;
+								}
+						
+								match /{document=**} {
+									allow read, write;
+								}
+							}
+						}
+					</code></pre>
 				</section>
 			</section>
 			<section>
@@ -271,7 +346,25 @@
 				</section>
 			</section>
 			<section>
-				<h2>Beta</h2>
+				<section>
+					<img class="stretch no-img-border" data-src="media/functions.png">
+					<aside class="notes" data-markdown>
+						- Can create backend in CF
+					</aside>
+				</section>
+				<section>
+					<h3>Just a JS function</h3>
+				</section>
+				<section>
+					<section>
+						Can have Cloud functions that...
+					</section>
+					<ul>
+						<li class="fragment">Triggers in firestore before(onWrite, onUpdate, onRead, onDelete)</li>
+						<li class="fragment">HTTP</li>
+						<li class="fragment">Named (can call directly)</li>
+					</ul>
+				</section>
 			</section>
 			<section>
 				QnA
