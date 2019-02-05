@@ -44,6 +44,20 @@
 		.black-stroke-thin {
 			-webkit-text-stroke: 1px black;
 		}
+
+		.line-through {
+			text-decoration: line-through;
+		}
+
+		.firebase-color {
+			color: #FFCA28;
+		}
+		.firebase-color-amber {
+			color: #FFA000;
+		}
+		.firebase-color-orange {
+			color: #F57C00;
+		}
 	</style>
 
 	<!-- Theme used for syntax highlighting of code -->
@@ -63,9 +77,9 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h2>
-					Firestore
-				</h2>
+				<h1>
+					<span class="firebase-color">Firestore</span>
+				</h1>
 				<h3>
 					Jan Greger Hemb & Erik Kringstad Olsen
 				</h3>
@@ -73,7 +87,7 @@
 					Senior knowledge engineers at Computas
 				</h4>
 				<h4>
-					bit.ly/
+					bit.ly/firestore2019
 				</h4>
 			</section>
 			<section>
@@ -81,7 +95,10 @@
 			</section>
 			<section>
 				<section>
-					<h2>What is Firebase</h2>
+					<h1>What is <span class="line-through">Love</span> <span class="firebase-color">Firebase</span></h1>
+				</section>
+				<section data-background="media/firebaseHome.png">
+					<!-- <img class="stretch no-img-border" data-src="media/firebaseHome.png"> -->
 				</section>
 				<section>
 					<img class="stretch no-img-border" data-src="media/auth.png">
@@ -114,6 +131,17 @@
 
 				</section>
 				<section>
+					<img class="stretch no-img-border" data-src="media/mlkit.png">
+				</section>
+				<section data-background="media/mlkit-ui.png">
+
+				</section>
+				<section>
+					<h2>
+						And finally we have...
+					</h2>
+				</section>
+				<section>
 					<img class="stretch no-img-border" data-src="media/firestore.png">
 				</section>
 				<section data-background="media/firebase-ui.png">
@@ -128,9 +156,9 @@
 			</section>
 			<section>
 				<section>
-					<h2>
-						Firestore in a nutshell
-					</h2>
+					<h1>
+						<span class="firebase-color">Firestore</span> in a nutshell 🥜
+					</h1>
 					<ul>
 						<li class="fragment">
 							NoSQL cloud database
@@ -188,13 +216,13 @@
 				<section>
 					<h1>🎉 Out of Beta! 🎉</h1>
 				</section>
-				<section data-background="media/pondus/2.jpg">
+				<section data-background="media/pondus/1.jpg">
 
 				</section>
 			</section>
 			<section>
 				<section>
-					<h2>NoSQl in a nutshell</h2>
+					<h1>NoSQl in a nutshell</h1>
 				</section>
 				<section>
 					<h3> (Usually) schema-less </h3>
@@ -206,7 +234,7 @@
 					<h3> NoSQL means no SQL... </h3>
 				</section>
 				<section data-background="media/pika.png">
-				
+
 				</section>
 				<section>
 					<h3> AAAHHH!!! Duplication! </h3>
@@ -217,7 +245,7 @@
 			</section>
 			<section>
 				<section>
-					<h2>The benefits of Firestore</h2>
+					<h1>The benefits of <span class="firebase-color">Firestore</span></h1>
 				</section>
 				<section>
 					<h3>
@@ -234,10 +262,10 @@
 					<h3>Offline support</h3>
 				</section>
 				<section>
-					<h3>Has ACID transactions</h3>
+					<h3> ACID transactions</h3>
 				</section>
 				<section>
-					<h3>Where statements across multiple fields</h3>
+					<h3>Multiple where statements</h3>
 				</section>
 				<!-- <section>
 					<h3>Benefits comming for Realtime Database</h3>
@@ -246,10 +274,10 @@
 						<li>Array contains</li>
 					</ul>
 				</section> -->
-			</section>
+			</section> 
 			<section>
 				<section>
-					<h2>All data is indexed</h2>
+					<h1>All data is indexed</h1>
 					<aside class="notes" data-markdown>
 						- Zigzag merge join
 					</aside>
@@ -269,7 +297,7 @@
 			</section>
 			<section>
 				<section>
-					<h2>The drawbacks of Firestore</h2>
+					<h2>The drawbacks of <span class="firebase-color">Firestore</span></h2>
 				</section>
 				<section>
 					If it can't be index, it can't be searched
@@ -284,7 +312,7 @@
 					Can't do where on: =!, OR, “%partial%”, a missing field
 				</section>
 				<section>
-					Cant do where < or> on one field and then order by a different field
+					Cant do where < or > on one field and then order by a different field
 				</section>
 				<section>
 					<table>
@@ -323,9 +351,9 @@
 			</section>
 			<section>
 				<section>
-					<h2>
-						Querying and sorting data
-					</h2>
+					<h1>
+						Querying and sorting data 
+					</h1>
 				</section>
 				<section>
 					<h3>
@@ -367,7 +395,7 @@
 			</section>
 			<section>
 				<section>
-					<h2>Security</h2>
+					<h1>Security 🔒</h1>
 				</section>
 				<section>
 					Security Rules
@@ -395,7 +423,7 @@
 			</section>
 			<section>
 				<section>
-					<h2>Pricing</h2>
+					<h2>Pricing 💰</h2>
 				</section>
 				<section>
 					<h3>Free and cheap!</h3>
@@ -429,7 +457,7 @@
 				</section>
 			</section>
 			<section>
-				QnA
+				QnA ❓
 			</section>
 		</div>
 	</div>
