@@ -72,6 +72,10 @@
 		.gray {
 			color: gray;
 		}
+
+		.firebase-color {
+			color: orange;
+		}
 	</style>
 
 	<!-- Printing and PDF exports -->
@@ -118,12 +122,6 @@
 
 				</section>
 				<section>
-					<img class="stretch no-img-border" data-src="media/database.png">
-				</section>
-				<section data-background="media/databse-ui.png">
-
-				</section>
-				<section>
 					<img class="stretch no-img-border" data-src="media/storage.png">
 				</section>
 				<section data-background="media/storage-ui.png">
@@ -145,6 +143,12 @@
 					<img class="stretch no-img-border" data-src="media/mlkit.png">
 				</section>
 				<section data-background="media/mlkit-ui.png">
+				</section>
+
+				<section>
+					<img class="stretch no-img-border" data-src="media/database.png">
+				</section>
+				<section data-background="media/databse-ui.png">
 
 				</section>
 				<section>
@@ -169,7 +173,7 @@
 							NoSQL cloud database
 						</li>
 						<li class="fragment">
-							"Documents/JSON Objects"
+							Documents/JSON Objects
 						</li>
 						<li class="fragment">
 							Highly scalable with multi region replication
@@ -177,9 +181,9 @@
 						<li class="fragment">
 							Realtime syncronisation
 						</li>
-						<li class="fragment">
+						<!-- <li class="fragment">
 							Hierarchical structuring with sub collections
-						</li>
+						</li> -->
 						<li class="fragment">
 							Expressive querying (for NoSQL)
 						</li>
@@ -231,9 +235,6 @@
 				<section>
 					<h2> Easy to add fields, but need to code defensively </h2>
 				</section>
-				<section class="contain-bg-img" data-background="media/data-comparison.png">
-
-				</section>
 				<section>
 					<h2> NoSQL means no SQL... </h2>
 				</section>
@@ -265,6 +266,7 @@
 					<aside class="notes" data-markdown>
 						- Handles unstructured data
 						- No schema
+						- Great for prototyping and changing structure on the fly
 						- and most importantly...
 					</aside>
 				</section>
@@ -277,9 +279,6 @@
 						- Over til Greger..
 					</aside>
 				</section>
-				<section data-background="media/firestore-ui.png">
-
-				</section>
 			</section>
 			<section>
 				<section>
@@ -287,14 +286,14 @@
 				</section>
 				<section>
 					<h2>
-						Lookup-time is independent of amount of data
+						Lookup-time is independent of stored data
 					</h2>
 				</section>
 				<section>
 					<h2>Automatically scales to match ANY usage</h2>
 				</section>
 				<section>
-					<h2>Automatic data synchronization across users</h2>
+					<h2>Automatic data synchronization</h2>
 				</section>
 				<section>
 					<h2>Offline support</h2>
@@ -355,7 +354,7 @@
 				<section>
 					<h2>Can't do where like</h2>
 					<ul>
-						<li class="fragment">Where age <span class="red">25</span></li>
+						<li class="fragment">Where age <span class="red">!=</span> 25</li>
 						<li class="fragment">Where age = 25 <span class="red">OR</span> age = 26</li>
 						<li class="fragment">Where name = <span class="red">"%Jan%"</span></li>
 						<li class="fragment">Where age = <span class="red">*missing*</span></li>
@@ -364,7 +363,7 @@
 				</section>
 				<section>
 					<h2>
-						Can't do "WHERE age &lt; 25 ORDER BY name"
+						Can't do "<span class="firebase-color">WHERE</span> age &lt; 25 <span class="firebase-color">ORDER BY</span> name"
 					</h2>
 				</section>
 				<section>
@@ -403,10 +402,9 @@
 						<li class="fragment">Max 20k fields</li>
 					</ul>
 				</section>
-				<section>
-					<!-- remove? -->
+				<!-- <section>
 					<h2>Can't order by missing fields</h2>
-				</section>
+				</section> -->
 			</section>
 			<section>
 				<section>
@@ -479,8 +477,8 @@ service cloud.firestore {
 	match /databases/{database}/documents {
 
 		match /ansatt/{userId} {
-			allow read, update, delete: if request.auth.uid == userId;
-			allow create: if request.auth.uid != null;
+			allow read: if request.auth.uid == userId;
+			allow write: if request.auth.uid != null;
 		}
 
 		match /{document=**} {
@@ -524,17 +522,17 @@ service cloud.firestore {
 
 				</section>
 				<section>
-					<h2>Billed by reads, writes and deletes you perform.</h2>
+					<h2>Billed by reads, writes and deletes you perform</h2>
 					<img class="stretch no-img-border" data-src="media/price-per-operation.png">
 				</section>
 				<section>
-					<h2>Only counts the affected documents, regardless of the total amount of documents in the base.</h2>
+					<h2>Only counts the affected documents</h2>
 					<aside class="notes" data-markdown>
-						- say that: pay for each time a CF runs
+						<!-- - say that: pay for each time a CF runs -->
 					</aside>
 				</section>
 			</section>
-			<section>
+			<!-- <section>
 				<section>
 					<img class="stretch no-img-border" data-src="media/functions.png">
 					<aside class="notes" data-markdown>
@@ -554,7 +552,7 @@ service cloud.firestore {
 						<li class="fragment">Named (can call directly)</li>
 					</ul>
 				</section>
-			</section>
+			</section> -->
 
 			<section>
 				<h1>🎉 Out of Beta! 🎉</h1>
@@ -564,6 +562,10 @@ service cloud.firestore {
 
 			<section data-background="media/firestore-ui.png">
 
+			</section>
+
+			<section>
+				<h1>And that's <span class="firebase-color">Firestore</span></h1>
 			</section>
 
 			<section data-background="media/stock/questions.jpeg">
