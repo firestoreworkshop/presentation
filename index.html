@@ -64,6 +64,10 @@
 		.firebase-color-orange {
 			color: #F57C00;
 		}
+
+		.red {
+			color: red;
+		}
 	</style>
 
 	<!-- Printing and PDF exports -->
@@ -149,9 +153,6 @@
 				</section>
 				<section data-background="media/firestore-ui.png">
 
-				</section>
-				<section>
-					(Demo of firestore console?)
 				</section>
 			</section>
 			<section>
@@ -285,7 +286,7 @@
 					</aside>
 				</section>
 				<section>
-					Never loops over all data when searching
+					<h2>Never loops over all data when searching</h2>
 				</section>
 				<section>
 					<h2>How is data indexed?</h2>
@@ -302,45 +303,54 @@
 					<h1>The drawbacks of <span class="firebase-color">Firestore</span></h1>
 				</section>
 				<section>
-					If it can't be index, it can't be searched
+					<h2>If it can't be index, it can't be searched</h2>
 				</section>
 				<section>
-					Mixing datatypes causes problems
+					<h2>Mixing datatypes causes problems</h2>
 				</section>
 				<section>
 					<h2>Can't query across sub collections</h2>
 					<img class="stretch no-img-border" data-src="media/firestoreDocs.png">
 				</section>
 				<section>
-					Can't do where on: =!, OR, “%partial%”, a missing field
+					<h2>Can't do where like</h2>
+					<ul>
+						<li class="fragment">Where age <span class="red">25</span></li>
+						<li class="fragment">Where age = 25 <span class="red">OR</span> age = 26</li>
+						<li class="fragment">Where name = <span class="red">"%Jan%"</span></li>
+						<li class="fragment">Where age = <span class="red">*missing*</span></li>
+						<li class="fragment">And no <span class="red">JOIN</span></li>
+					</ul>
 				</section>
 				<section>
-					Cant do where < or> on one field and then order by a different field
+					<h2>
+						Can't do "WHERE age &lt; 25 ORDER BY name"
+					</h2>
 				</section>
 				<section>
 					<table>
 						<thead>
 							<tr>
-								<th>Index A</th>
-								<th>Index B</th>
+								<th>Age</th>
+								<th>Name</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>A</td>
-								<td>4</td>
+								<td>26</td>
+								<td>Jan</td>
 							</tr>
 							<tr>
-								<td>B</td>
-								<td>3</td>
+								<td>56</td>
+								<td>Per</td>
 							</tr>
 							<tr>
-								<td>C</td>
-								<td>2</td>
+								<td>33</td>
+								<td>Kim</td>
 							</tr>
 							<tr>
-								<td>D</td>
-								<td>1</td>
+								<td>47</td>
+								<td>Erik</td>
 							</tr>
 						</tbody>
 					</table>
@@ -408,7 +418,9 @@
 					<h2>Digital Koblingsordre</h2>
 				</section>
 				<section data-background="media/diko.png">
-					Firestore in practise, with a demo (Koblingsordre!)
+				</section>
+				<section data-background="media/firestore-ui.png">
+
 				</section>
 			</section>
 
@@ -478,7 +490,7 @@ service cloud.firestore {
 				</section>
 				<section data-background="media/price.png">
 					<aside class="notes" data-markdown>
-						- say thay: pay for each time a CF runs
+						- say that: pay for each time a CF runs
 					</aside>
 				</section>
 			</section>
@@ -508,7 +520,6 @@ service cloud.firestore {
 				<h1>🎉 Out of Beta! 🎉</h1>
 			</section>
 			<section data-background="media/pondus/1.jpg">
-
 			</section>
 
 			<section data-background="media/firestore-ui.png">
