@@ -147,20 +147,17 @@
 				<section>
 					<img class="stretch no-img-border" data-src="media/firestore.png">
 				</section>
-				<section data-background="media/firebase-ui.png">
+				<section data-background="media/firestore-ui.png">
 
 				</section>
 				<section>
 					(Demo of firestore console?)
 				</section>
 			</section>
-			<section data-background="media/diko.png">
-				Firestore in practise, with a demo (Koblingsordre!)
-			</section>
 			<section>
 				<section>
 					<h1>
-						<span class="firebase-color">Firestore</span> in a nutshell 🥜
+						<span class="firebase-color">Firestore</span> in a nutshell
 					</h1>
 					<ul>
 						<li class="fragment">
@@ -186,9 +183,7 @@
 						</li>
 					</ul>
 				</section>
-				<section data-background="media/firebase-ui.png">
 
-				</section>
 				<section>
 					<img class="stretch no-img-border" data-src="media/firestoreColl.png">
 				</section>
@@ -213,13 +208,7 @@
 						</tbody>
 					</table>
 				</section>
-				<section data-background="media/firebase-ui.png">
-
-				</section>
-				<section>
-					<h1>🎉 Out of Beta! 🎉</h1>
-				</section>
-				<section data-background="media/pondus/1.jpg">
+				<section data-background="media/firestore-ui.png">
 
 				</section>
 			</section>
@@ -228,22 +217,32 @@
 					<h1>NoSQl in a nutshell</h1>
 				</section>
 				<section>
-					<h3> (Usually) schema-less </h3>
+					<h2> (Usually) schema-less </h2>
 				</section>
 				<section>
-					<h3> Easy to add fields, but need to code defensively </h3>
+					<h2> Easy to add fields, but need to code defensively </h2>
 				</section>
 				<section>
-					<h3> NoSQL means no SQL... </h3>
+					<h2> NoSQL means no SQL... </h2>
 				</section>
 				<section data-background="media/pika.png">
 
 				</section>
 				<section>
-					<h3> AAAHHH!!! Duplication! </h3>
+					<h2> AAAHHH!!! Duplication! </h2>
 				</section>
 				<section>
-					<h3> Scaling </h3>
+					<h2>All data for one page in one document</h2>
+				</section>
+				<section>
+					<h2>But, why NoSQL?</h2>
+				</section>
+				<section>
+					<h2> Scaling </h2>
+				</section>
+
+				<section data-background="media/firestore-ui.png">
+
 				</section>
 			</section>
 			<section>
@@ -251,27 +250,27 @@
 					<h1>The benefits of <span class="firebase-color">Firestore</span></h1>
 				</section>
 				<section>
-					<h3>
+					<h2>
 						Lookup-time is independent of amount of data
-					</h3>
+					</h2>
 				</section>
 				<section>
-					<h3>Automatically scales to match ANY usage</h3>
+					<h2>Automatically scales to match ANY usage</h2>
 				</section>
 				<section>
-					<h3>Automatic data synchronization across users</h3>
+					<h2>Automatic data synchronization across users</h2>
 				</section>
 				<section>
-					<h3>Offline support</h3>
+					<h2>Offline support</h2>
 				</section>
 				<section>
-					<h3> ACID transactions</h3>
+					<h2> ACID transactions</h2>
 				</section>
 				<section>
-					<h3>Multiple where statements</h3>
+					<h2>Multiple where statements</h2>
 				</section>
 				<!-- <section>
-					<h3>Benefits comming for Realtime Database</h3>
+					<h2>Benefits comming for Realtime Database</h2>
 					<ul>
 						<li>Scaling</li>
 						<li>Array contains</li>
@@ -289,13 +288,13 @@
 					Never loops over all data when searching
 				</section>
 				<section>
-					<h3>How is data indexed?</h3>
+					<h2>How is data indexed?</h2>
 					<aside class="notes" data-markdown>
 						- all fields ascending and descending by default
 					</aside>
 				</section>
 				<section>
-					<h3>Composite indexes</h3>
+					<h2>Composite indexes</h2>
 				</section>
 			</section>
 			<section>
@@ -309,7 +308,8 @@
 					Mixing datatypes causes problems
 				</section>
 				<section>
-					<h3>Can't query across sub collections (TODO IMG)</h3>
+					<h2>Can't query across sub collections</h2>
+					<img class="stretch no-img-border" data-src="media/firestoreDocs.png">
 				</section>
 				<section>
 					Can't do where on: =!, OR, “%partial%”, a missing field
@@ -346,10 +346,15 @@
 					</table>
 				</section>
 				<section>
-					Max 1 write per sec per document, max 1MB per document and max 20k fields
+					<h2>Document limitations</h2>
+					<ul>
+						<li class="fragment">Max 1 write per sec per document</li>
+						<li class="fragment">Max 1MB per document</li>
+						<li class="fragment">Max 20k fields</li>
+					</ul>
 				</section>
 				<section>
-					Can't order by missing fields
+					<h2>Can't order by missing fields</h2>
 				</section>
 			</section>
 			<section>
@@ -359,9 +364,9 @@
 					</h1>
 				</section>
 				<section>
-					<h3>
+					<h2>
 						Three operators to play with
-					</h3>
+					</h2>
 					<ul>
 						<li class="fragment">
 							Where
@@ -382,7 +387,7 @@
 					</aside>
 				</section>
 				<section>
-					<h3>The where operator</h3>
+					<h2>The where operator</h2>
 					<ul>
 						<li>&lt;</li>
 						<li>&lt;=</li>
@@ -396,31 +401,40 @@
 					</aside>
 				</section>
 			</section>
+
+			<section>
+				<section>
+					<h1>DiKO</h1>
+					<h2>Digital Koblingsordre</h2>
+				</section>
+				<section data-background="media/diko.png">
+					Firestore in practise, with a demo (Koblingsordre!)
+				</section>
+			</section>
+
 			<section>
 				<section>
 					<h1>Security 🔒</h1>
 				</section>
 				<section>
-					Security Rules
+					<h2>Security Rules</h2>
 					<aside class="notes" data-markdown>
 						- Written in broke JS, and run before each request. Returns if allowed to read or write
 					</aside>
-				</section>
-				<section>
 					<pre class=""><code class="TypeScript" data-trim contenteditable>
-						service cloud.firestore {
-							match /databases/{database}/documents {
-						
-								match /ansatt/{userId} {
-									allow read, update, delete: if request.auth.uid == userId;
-									allow create: if request.auth.uid != null;
-								}
-						
-								match /{document=**} {
-									allow read, write;
-								}
-							}
-						}
+service cloud.firestore {
+	match /databases/{database}/documents {
+
+		match /ansatt/{userId} {
+			allow read, update, delete: if request.auth.uid == userId;
+			allow create: if request.auth.uid != null;
+		}
+
+		match /{document=**} {
+			allow read, write;
+		}
+	}
+}
 					</code></pre>
 				</section>
 			</section>
@@ -440,7 +454,7 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Projects that probably should not consider <span class="firebase-color">Firestore</span></h2>
+					<h2>Projects that shouldn't consider <span class="firebase-color">Firestore</span></h2>
 					<ul>
 						<li class="fragment">Write heavy projects</li>
 						<li class="fragment">Huge projects</li>
@@ -451,16 +465,21 @@
 
 			<section>
 				<section>
-					<h2>Pricing 💰</h2>
+					<h1>Pricing 💰</h1>
 				</section>
 				<section>
-					<h3>Free and cheap!</h3>
+					<h2>Free and cheap!</h2>
 				</section>
 				<section>
-					<h3>Billed by reads, writes and deletes you perform.</h3>
+					<h2>Billed by reads, writes and deletes you perform.</h2>
 				</section>
 				<section>
-					<h3>Only counts the affected documents, regardless of the total amount of documents in the base.</h3>
+					<h2>Only counts the affected documents, regardless of the total amount of documents in the base.</h2>
+				</section>
+				<section data-background="media/price.png">
+					<aside class="notes" data-markdown>
+						- say thay: pay for each time a CF runs
+					</aside>
 				</section>
 			</section>
 			<section>
@@ -471,7 +490,7 @@
 					</aside>
 				</section>
 				<section>
-					<h3>Just a JS function</h3>
+					<h2>Just a JS function</h2>
 				</section>
 				<section>
 					<section>
@@ -484,6 +503,18 @@
 					</ul>
 				</section>
 			</section>
+
+			<section>
+				<h1>🎉 Out of Beta! 🎉</h1>
+			</section>
+			<section data-background="media/pondus/1.jpg">
+
+			</section>
+
+			<section data-background="media/firestore-ui.png">
+
+			</section>
+
 			<section data-background="media/stock/questions.jpeg">
 				<h1 class="fragment">Questions?</h1>
 			</section>
