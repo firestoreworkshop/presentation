@@ -215,30 +215,63 @@
 			<section>
 				<section>
 					<h1>NoSQl in a nutshell</h1>
+					<img class="stretch no-img-border" data-src="media/nosql-comparison.png">
 				</section>
 				<section>
 					<h2> (Usually) schema-less </h2>
 				</section>
+				<aside class="notes" data-markdown>
+                        - less restrictions, but...
+                    </aside>
 				<section>
 					<h2> Easy to add fields, but need to code defensively </h2>
+				</section>
+				<section data-background="media/data-comparison.png">
+
 				</section>
 				<section>
 					<h2> NoSQL means no SQL... </h2>
 				</section>
 				<section data-background="media/pika.png">
+				<aside class="notes" data-markdown>
+                        - No fancy joins
+						- Which leads to...
+                    </aside>
 
 				</section>
 				<section>
 					<h2> AAAHHH!!! Duplication! </h2>
+				</section>
+				<section data-background="media/duplication.png">
+				<aside class="notes" data-markdown>
+                        - Painful at first
+						- keep all copies up to date for any updates
+						- Fewer "tables"
+						- Leads to ..
+						
+                    </aside>
+
 				</section>
 				<section>
 					<h2>All data for one page in one document</h2>
 				</section>
 				<section>
 					<h2>But, why NoSQL?</h2>
+					                 <aside class="notes" data-markdown>
+                        - Handles unstructured data
+						- No schema
+						- and most importantly...
+                    </aside>
 				</section>
 				<section>
 					<h2> Scaling </h2>
+				</section>
+				<section data-background="media/scaling.png">
+                 <aside class="notes" data-markdown>
+                        - Horizontal vs Vertical
+						- Sharding
+						- Over til Greger..
+                    </aside>
 				</section>
 
 				<section data-background="media/firestore-ui.png">
@@ -468,7 +501,7 @@ service cloud.firestore {
 					<h1>Pricing 💰</h1>
 				</section>
 				<section>
-					<h2>Free and cheap!</h2>
+					<h2>Free or cheap!</h2>
 				</section>
 				<section>
 					<h2>Billed by reads, writes and deletes you perform.</h2>
