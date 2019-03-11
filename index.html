@@ -110,7 +110,8 @@
 			</section>
 			<section>
 				<section>
-					<h1>What is <span class="line-through gray">Love</span> <span class="firebase-color">Firebase?</span></h1>
+					<h1>What is <span class="line-through gray">Love</span> <span
+							class="firebase-color">Firebase?</span></h1>
 				</section>
 				<section data-background="media/firebaseHome.png">
 					<!-- <img class="stretch no-img-border" data-src="media/firebaseHome.png"> -->
@@ -221,6 +222,12 @@
 
 				</section>
 			</section>
+
+			<section>
+				<h1>Task 1</h1>
+				<h3>Setup Firebase & Firestore</h3>
+			</section>
+
 			<section>
 				<section>
 					<h1><span class="firebase-color">NoSQL</span> in a nutshell</h1>
@@ -260,7 +267,8 @@
 
 				</section>
 				<section>
-					<h2>One <span class="firebase-color">page </span> in one <span class="firebase-color">document</span></h2>
+					<h2>One <span class="firebase-color">page </span> in one <span
+							class="firebase-color">document</span></h2>
 				</section>
 				<section>
 					<h2>But, why <span class="firebase-color">NoSQL</span>?</h2>
@@ -281,99 +289,23 @@
 					</aside>
 				</section>
 			</section>
-			<section>
-				<section>
-					<h1>The benefits of <span class="firebase-color">Firestore</span></h1>
-				</section>
-				<section>
-					<h2>
-						Lookup-time is <span class="firebase-color">independent</span> of stored data
-					</h2>
-				</section>
-				<section>
-					<h2>Automatically scales to match <span class="firebase-color">ANY</span> usage</h2>
-				</section>
-				<section>
-					<h2>Automatic data synchronization</h2>
-				</section>
-				<section>
-					<h2>Offline support</h2>
-				</section>
-				<section>
-					<h2> ACID transactions</h2>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h1><span class="firebase-color">All</span> data is <span class="firebase-color">indexed</span></h1>
-					<aside class="notes" data-markdown>
-						- Zigzag merge join
-					</aside>
-				</section>
-				<section>
-					<h2>Never loops over all data when searching</h2>
-				</section>
-				<section>
-					<h2>How is data indexed?</h2>
-					<aside class="notes" data-markdown>
-						- all fields ascending and descending by default
-					</aside>
-				</section>
-				<section data-background="media/index-single.png">
-				</section>
-				<section>
-					<h2>Composite indexes</h2>
-				</section>
-				<section data-background="media/comp-index.png">
 
-				</section>
-			</section>
 			<section>
-				<section>
-					<h1>The drawbacks of <span class="firebase-color">Firestore</span></h1>
-				</section>
-				<section>
-					<h2>If it can't be indexed, it can't be searched</h2>
-				</section>
-				<section>
-					<h2>Mixing datatypes causes problems</h2>
-				</section>
-				<section>
-					<h2>Can't query across sub collections</h2>
-					<img class="stretch no-img-border" data-src="media/firestoreDocs.png">
-				</section>
-				<section>
-					<h2>Can't do where like</h2>
-					<ul>
-						<li class="fragment">Where age <span class="red">!=</span> 25</li>
-						<li class="fragment">Where age = 25 <span class="red">OR</span> age = 26</li>
-						<li class="fragment">Where name = <span class="red">"%Jan%"</span></li>
-						<li class="fragment">Where age = <span class="red">*missing*</span></li>
-						<li class="fragment">And no <span class="red">JOIN</span></li>
-					</ul>
-				</section>
-				<section>
-					<h2>
-						Can't do "<span class="firebase-color">WHERE</span> age &lt; 25 <span class="firebase-color">ORDER BY</span>
-						name"
-					</h2>
-				</section>
-				<section>
-					<h2>Document limitations</h2>
-					<ul>
-						<li class="fragment">Max 1 write per sec per document</li>
-						<li class="fragment">Max 1MB per document</li>
-						<li class="fragment">Max 20k fields</li>
-					</ul>
-				</section>
-				<!-- <section>
-					<h2>Can't order by missing fields</h2>
-				</section> -->
+				<h1>Task 2</h1>
+				<h3>Add data to Firestore</h3>
+				<h3>github.com/firestoreworkshop/frontend/wiki/Database-structure</h3>
 			</section>
+
+			<section>
+				<h1>Task 3</h1>
+				<h3>Setup Frontend and show data</h3>
+			</section>
+
 			<section>
 				<section>
 					<h1>
-						<span class="firebase-color">Querying</span> and <br><span class="firebase-color">sorting</span> data
+						<span class="firebase-color">Querying</span> and <br><span class="firebase-color">sorting</span>
+						data
 					</h1>
 				</section>
 				<section>
@@ -417,6 +349,112 @@
 
 			<section>
 				<section>
+					<h1><span class="firebase-color">All</span> data is <span class="firebase-color">indexed</span></h1>
+					<aside class="notes" data-markdown>
+						- Zigzag merge join
+					</aside>
+				</section>
+				<section>
+					<h2>Never loops over all data when searching</h2>
+				</section>
+				<section>
+					<h2>How is data indexed?</h2>
+					<aside class="notes" data-markdown>
+						- all fields ascending and descending by default
+					</aside>
+				</section>
+				<section data-background="media/index-single.png">
+				</section>
+				<section>
+					<h2>Composite indexes</h2>
+				</section>
+				<section data-background="media/comp-index.png">
+
+				</section>
+			</section>
+
+			<section>
+				<h1>Task 4</h1>
+				<h3>Filtering and sorting data</h3>
+				<h3>First hardcoded then via searchbox</h3>
+			</section>
+
+			<section>
+				<section>
+					<h1>The drawbacks of <span class="firebase-color">Firestore</span></h1>
+				</section>
+				<section>
+					<h2>If it can't be indexed, it can't be searched</h2>
+				</section>
+				<section>
+					<h2>Mixing datatypes causes problems</h2>
+				</section>
+				<section>
+					<h2>Can't query across sub collections</h2>
+					<img class="stretch no-img-border" data-src="media/firestoreDocs.png">
+				</section>
+				<section>
+					<h2>Can't do where like</h2>
+					<ul>
+						<li class="fragment">Where age <span class="red">!=</span> 25</li>
+						<li class="fragment">Where age = 25 <span class="red">OR</span> age = 26</li>
+						<li class="fragment">Where name = <span class="red">"%Jan%"</span></li>
+						<li class="fragment">Where age = <span class="red">*missing*</span></li>
+						<li class="fragment">And no <span class="red">JOIN</span></li>
+					</ul>
+				</section>
+				<section>
+					<h2>
+						Can't do "<span class="firebase-color">WHERE</span> age &lt; 25 <span
+							class="firebase-color">ORDER BY</span>
+						name"
+					</h2>
+				</section>
+				<section>
+					<h2>Document limitations</h2>
+					<ul>
+						<li class="fragment">Max 1 write per sec per document</li>
+						<li class="fragment">Max 1MB per document</li>
+						<li class="fragment">Max 20k fields</li>
+					</ul>
+				</section>
+				<!-- <section>
+					<h2>Can't order by missing fields</h2>
+				</section> -->
+			</section>
+
+			<section>
+				<section>
+					<h1>The benefits of <span class="firebase-color">Firestore</span></h1>
+				</section>
+				<section>
+					<h2>
+						Lookup-time is <span class="firebase-color">independent</span> of stored data
+					</h2>
+				</section>
+				<section>
+					<h2>Automatically scales to match <span class="firebase-color">ANY</span> usage</h2>
+				</section>
+				<section>
+					<h2>Automatic data synchronization</h2>
+				</section>
+				<section>
+					<h2>Offline support</h2>
+				</section>
+				<section>
+					<h2> ACID transactions</h2>
+				</section>
+			</section>
+			
+
+			<section>
+				<h1>Task 5</h1>
+				<h3>Open and show details page</h3>
+				<h3></h3>
+			</section>
+
+			<section>
+				<section>
 					<h1>DiKO</h1>
 					<h2>Digital Koblingsordre</h2>
 				</section>
@@ -425,6 +463,18 @@
 				<section data-background="media/firestore-ui.png">
 
 				</section>
+			</section>
+
+			<section>
+				<h1>Task 6</h1>
+				<h3>Add comments as a sub collection</h3>
+				<h3></h3>
+			</section>
+
+			<section>
+				<h1>Task 7</h1>
+				<h3>Host it on firebase!</h3>
+				<h3>TODO WIKI link!</h3>
 			</section>
 
 			<section>
@@ -461,7 +511,8 @@ service cloud.firestore {
 
 				</section>
 				<section>
-					<h2>Billed by <span class="firebase-color">reads</span>, <span class="firebase-color">writes</span> and <span class="firebase-color">deletes</span></h2>
+					<h2>Billed by <span class="firebase-color">reads</span>, <span class="firebase-color">writes</span>
+						and <span class="firebase-color">deletes</span></h2>
 					<img class="stretch no-img-border" data-src="media/price-per-operation.png">
 					<aside class="notes" data-markdown>
 						- ca 200k reads for 1kr
@@ -488,14 +539,22 @@ service cloud.firestore {
 				<h1>And that's <span class="firebase-color">Firestore</span></h1>
 			</section>
 
-			<section data-background="media/stock/questions.jpeg">
-				<h1 class="fragment"><span class="firebase-color">Questions?</span></h1>
-			</section>
 			<section>
-				<h1>bit.ly/<span class="firebase-color">firestore</span>2019</h1>
+				<h1>Task ∞</h1>
+				<h3>Improving on the application</h3>
+				<h3>TODO WIKI link!</h3>
+				<ul>
+					<li>More filtering</li>
+					<li>More restaurant types</li>
+				</ul>
+				<h3>github.com/firestoreworkshop/frontend/wiki/Going-beyond-the-workshop</h3>
 			</section>
+
 			<section>
-				This page is maliciously left blank
+				<h1>Going even further</h1>
+				<h3>Add login and users</h3>
+				<h3>Add security rules</h3>
+				<h3>Add some cloud functions</h3>
 			</section>
 		</div>
 	</div>
