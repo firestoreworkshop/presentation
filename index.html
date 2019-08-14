@@ -518,11 +518,12 @@
 				</section>
 				<section data-background="media/diko.png">
 				</section>
+				<section data-state="dikovideo">
+					<a href="https://www.dropbox.com/s/l5lqu2ukh2dpjke/2019-02-19%2013.51.25.mp4?dl=0"
+						target="_blank">Video</a>
+				</section>
 				<section data-background="media/firestore-ui.png">
 
-				</section>
-				<section>
-					https://www.dropbox.com/s/l5lqu2ukh2dpjke/2019-02-19%2013.51.25.mp4?dl=0
 				</section>
 			</section>
 
@@ -634,6 +635,10 @@ service cloud.firestore {
 				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
 			]
 		});
+
+		Reveal.addEventListener('dikovideo', () => {
+			windowObjectReference = window.open("https://www.dropbox.com/s/l5lqu2ukh2dpjke/2019-02-19%2013.51.25.mp4?dl=0");
+		}, false);
 	</script>
 </body>
 
