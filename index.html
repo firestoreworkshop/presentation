@@ -364,6 +364,8 @@
 						<li>&gt;=</li>
 						<li>&gt;</li>
 						<li class="fragment">array-contains</li>
+						<li class="fragment">array-contains-any</li>
+						<li class="fragment">in (up to 10)</li>
 					</ul>
 					<aside class="notes" data-markdown>
 						- array-contains on one element per query
@@ -424,7 +426,7 @@
 					<h2>Can't do where like</h2>
 					<ul>
 						<li class="fragment">Where age <span class="red">!=</span> 25</li>
-						<li class="fragment">Where age = 25 <span class="red">OR</span> age = 26</li>
+						<!-- <li class="fragment">Where age = 25 <span class="red">OR</span> age = 26</li> -->
 						<li class="fragment">Where name = <span class="red">"%Jan%"</span></li>
 						<li class="fragment">Where age = <span class="red">*missing*</span></li>
 						<li class="fragment">And no <span class="red">JOIN</span></li>
